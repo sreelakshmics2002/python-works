@@ -1,0 +1,12 @@
+maxpop=max(data,key=lambda i:i.get("population"))
+print(maxpop)
+
+
+minpop=min(data,key=lambda i:i.get("population"))
+print(minpop)
+
+
+def get_country_languages(name):
+    c_data=get_country_details(name)
+    return [i.get("name") for i in c_data.get("languages")]
+print(get_country_languages("India"))
